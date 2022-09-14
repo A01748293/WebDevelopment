@@ -7,8 +7,12 @@ const tareasController = require('../controllers/tareas')
 //Traductor lenguaje efe 14 sept
 router.get('/efe', tareasController.getEfe);
 
-//Servicio para procesar los datos del formulario
 router.post('/efe', tareasController.postEfe);
+
+//Palindromo 14 sept
+router.get('/palindrome', tareasController.getPalindrome);
+
+router.post('/palindrome', tareasController.postPalindrome);
 
 module.exports = router
 

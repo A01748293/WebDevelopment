@@ -19,9 +19,24 @@ SpeakEfe = (fword) => {
     return normalWord    
 }
 
+isPalindrome = (phrase) => {
+    phrase = phrase.toLowerCase();
+    //console.log(fword);
+    var palindrome = true
+    for(let i = 0; i<(phrase.length)/2; i++){        
+        if(phrase[i] != phrase[phrase.length-i-1]){
+            palindrome = false
+        }
+    }   
+    return palindrome
+}
+
+
+
 //Define como se van a comportar las diferentes rutas que tenemos en routes
 const path = require("path");
 
+//Lenguaje efe
 exports.getEfe = (req, res)=>{
     res.sendFile(path.join(__dirname, '..','views','speakF.html'));
 }
@@ -30,6 +45,17 @@ exports.postEfe = (req, res)=>{
     console.log(req.body.frase);
     res.send(SpeakEfe(req.body.frase));   
 }
+
+//Palindromo
+exports.getPalindrome = (req, res)=>{
+    res.sendFile(path.join(__dirname, '..','views','palindromo.html'));
+}
+
+exports.postPalindrome = (req, res)=>{
+    console.log(req.body.frase);
+    res.send(isPalindrome(req.body.frase));   
+}
+
 
 
 
