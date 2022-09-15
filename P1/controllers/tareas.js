@@ -21,6 +21,8 @@ SpeakEfe = (fword) => {
 
 isPalindrome = (phrase) => {
     phrase = phrase.toLowerCase();
+    phrase = phrase.replace(/\s/g, '');
+
     //console.log(fword);
     var palindrome = true
     for(let i = 0; i<(phrase.length)/2; i++){        
