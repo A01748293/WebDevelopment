@@ -25,6 +25,5 @@ exports.getValidacion = (req, res)=>{
 
 exports.postValidacion = (req, res)=>{
     console.log(req.body);
-    //res.json({estado: "Exitoso"})
-    res.send(isTriRect(req.body.ang1, req.body.ang2,req.body.ang3)); 
+    res.json({trianguloRect: isTriRect(req.body.ang1, req.body.ang2,req.body.ang3)})
 }

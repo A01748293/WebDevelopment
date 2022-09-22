@@ -18,7 +18,7 @@ app.use('/examen', examenRoutes);
 
 //Lanzar la aplicacion 
 //listen recibe el puerto donde va a estar y su callback
-app.listen(8083, ()=>{
+app.listen(8080, ()=>{
     console.log('Servidor en linea');
     
 });
